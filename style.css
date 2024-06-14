@@ -1,0 +1,242 @@
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: conic-gradient(
+    #edffd3 90deg,
+    #d4ff99 90deg 180deg,
+    #edffd3 180deg 270deg,
+    #d4ff99 270deg
+    );
+    background-repeat: repeat ;
+    background-size: 60px 60px;
+    background-position: top left;   
+}
+
+header {
+    background-color: #303030; 
+    color: white;
+    border-bottom: 0.5px solid gray; 
+}
+
+.underline {
+    text-decoration: underline dashed;
+    text-decoration-color: #acfc3d;
+    text-decoration-thickness: 5px;
+}
+
+mark {
+    background-color: #acfc3d;
+    border: 1px solid #acfc3d;
+    border-radius: 20px;
+    padding: 0 5px;
+}
+
+.search-container {
+    background-color: #303030; 
+    border-top: 1px solid rgb(138, 132, 132); 
+    padding-top: 20px;
+}
+
+.search-result {   
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.no-search #grid, .no-result #grid {
+    padding: 0px;
+}
+
+.no-search #text, .no-result #text {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0px;
+}
+
+.no-search #text {
+    line-height: 1em;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.container h1 {
+    margin-bottom: 50px;
+}
+
+#input {
+    width: 40%;
+    padding: 8px;
+    margin: 20px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#text {
+    font-size: 1.2em;
+    margin: 20px 0;
+    text-align: left; 
+    padding-left: 20px;
+    clear: both;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.meal-item {
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.meal-item:hover {
+    transform: translateY(-5px);
+}
+
+.meal-item img {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block; 
+}
+
+.meal-item h3 {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    margin: 0;
+    padding: 10px 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-open {
+    display: flex;
+}
+
+.recipe {
+    padding: 0px 20px;
+}
+.recipe-img, .recipe-ing{
+    width: 40%;
+    padding: 5%;
+    float: left;
+    text-align: left;
+}
+
+.recipe-desc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 3px dashed #acfc3d;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+    .recipe {
+        padding: 0px 5px;
+    }
+
+    .recipe-desc {
+        flex-direction: column;
+    }
+
+    .recipe-img, .recipe-ing {
+        width: 80%;
+    }
+}
+
+.content {
+    background-color: #edffd3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content h2 {
+    margin: 0 0 10px;
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 1px; 
+}
+
+.close {
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0 5px;
+    line-height: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

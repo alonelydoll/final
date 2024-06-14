@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Meal DB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+  <div class="container">
+    <h1>Meal Finder &#127826</h1>
+    <div class="search-container">
+      <input type="text" id="input" placeholder="Search a meal...">
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="no-search search-result">
+      <div id="text">
+        <p>
+          Psst! Are you <span class="underline">tired</span> of eating the same food everyday ?
+           <br><br>
+           Find <span class="underline">new meal ideas</span> among or <mark><b>300+</b> recipe cards</mark> prepared just for you ! &#9825</p>
+      </div>
+      <div id="grid"></div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="content">
+      <span class="close">&times;</span>
+      <div id="recipe" class="recipe"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
