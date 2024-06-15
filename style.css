@@ -22,7 +22,9 @@ header {
 
 .underline {
     text-decoration: underline dashed;
+    -webkit-text-decoration: underline dashed;
     text-decoration-color: #acfc3d;
+    -webkit-text-decoration-color: #acfc3d;
     text-decoration-thickness: 5px;
 }
 
@@ -173,20 +175,10 @@ mark {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsiveness */
-@media (max-width: 800px) {
-    .recipe {
-        padding: 0px 5px;
-    }
-
-    .recipe-desc {
-        flex-direction: column;
-    }
-
-    .recipe-img, .recipe-ing {
-        width: 80%;
-    }
+.recipe li {
+    list-style-image: url(cherries.png);
 }
+
 
 .content {
     background-color: #edffd3;
@@ -235,6 +227,27 @@ mark {
 .content::-webkit-scrollbar {
     width: 0px;
     background: transparent; 
+}
+
+/* Responsiveness */
+@media (max-width: 800px) {
+    .content {
+        width: 70%;
+    }
+    .recipe {
+        padding: 0px 5px;
+    }
+
+    .recipe-desc {
+        flex-direction: column;
+    }
+
+    .recipe-img, .recipe-ing {
+        width: 80%;
+    }
+    .recipe li {
+        list-style-image: none;
+    }
 }
 
 .overflow-hidden {
